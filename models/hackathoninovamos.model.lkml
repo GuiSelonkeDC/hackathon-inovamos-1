@@ -41,7 +41,7 @@ explore: orders {
   }
   join: climatempo_historico_id {
     type: full_outer
-    sql_on: UPPER(${climatempo_historico_id.cidade}) = UPPER(${hubs.hub_city}) AND DATE(${orders.order_moment_created_date}) = ${climatempo_historico_id.data_date};;
+    sql_on: UPPER(${climatempo_historico_id.cidade}) = UPPER(${hubs.hub_city}) AND DATE(${orders.order_moment_created_date}) = DATE(${climatempo_historico_id.data_date});;
     relationship: many_to_many
   }
   join: climatempo_previsao_id {
