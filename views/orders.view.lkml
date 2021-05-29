@@ -105,7 +105,7 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_accepted ;;
+    sql: CAST(${TABLE}."order_moment_accepted" AS TIMESTAMP) ;;
   }
 
   dimension_group: order_moment_collected {
@@ -119,7 +119,7 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_collected ;;
+    sql: CAST(${TABLE}."order_moment_collected" AS TIMESTAMP);;
   }
 
   dimension_group: order_moment_created {
@@ -133,7 +133,7 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_created ;;
+    sql: CAST(${TABLE}."order_moment_created" as TIMESTAMP) ;;
   }
 
   dimension_group: order_moment_delivered {
@@ -147,7 +147,7 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_delivered ;;
+    sql: CAST(${TABLE}."order_moment_delivered" as TIMESTAMP) ;;
   }
 
   dimension_group: order_moment_delivering {
@@ -161,7 +161,7 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_delivering ;;
+    sql: CAST(${TABLE}."order_moment_delivering" as TIMESTAMP) ;;
   }
 
   dimension_group: order_moment_finished {
@@ -175,7 +175,7 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_finished ;;
+    sql: CAST(${TABLE}."order_moment_finished" as TIMESTAMP) ;;
   }
 
   dimension_group: order_moment_in_expedition {
@@ -189,7 +189,7 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_in_expedition ;;
+    sql: CAST(${TABLE}."order_moment_in_expedition" as TIMESTAMP) ;;
   }
 
   dimension_group: order_moment_ready {
@@ -203,7 +203,7 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_ready ;;
+    sql: CAST(${TABLE}."order_moment_ready" as TIMESTAMP) ;;
   }
 
   dimension: order_status {
