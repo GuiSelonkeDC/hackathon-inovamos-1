@@ -6,12 +6,3 @@ datagroup: hackathoninovamos_default_datagroup {
 }
 
 persist_with: hackathoninovamos_default_datagroup
-
-explore: orders {
-  label: "Inovamos"
-  join: stores {
-    type: left_outer
-    sql_on: ${stores.store_id} = ${orders.store_id} ;;
-    relationship: one_to_many
-  }
-  }
