@@ -38,7 +38,7 @@ view: orders {
 
   dimension: order_created_hour {
     type: number
-    sql: ${TABLE}.order_created_hour ;;
+    sql: ${TABLE}."order_created_hour" ;;
   }
 
   dimension: order_created_minute {
