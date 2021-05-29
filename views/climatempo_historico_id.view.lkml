@@ -26,7 +26,7 @@ view: climatempo_historico_id {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.data ;;
+    sql: CAST(${TABLE}.data as TIMESTAMP) ;;
   }
 
   dimension: estado {
