@@ -46,7 +46,7 @@ view: climatempo_historico_id {
 
   dimension: chuva {
     sql:
-    CASE WHEN ${TABLE}.precipitacao != "0" THEN "Sim" ELSE "Nao" END
+    CASE WHEN ${TABLE}.precipitacao > 0 THEN "Sim" ELSE "Nao" END
 
     ;;
 
