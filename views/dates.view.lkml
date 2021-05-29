@@ -14,7 +14,7 @@ view: dates {
     ]
     convert_tz: no
     datatype: date
-    sql: CAST(${TABLE}."date_date" AS TIMESTAMP) ;;
+    sql: CAST(${TABLE}.date_date AS TIMESTAMP) ;;
   }
 
   dimension: date_day {
