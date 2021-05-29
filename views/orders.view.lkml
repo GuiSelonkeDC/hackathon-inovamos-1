@@ -133,8 +133,9 @@ view: orders {
       quarter,
       year
     ]
-    sql: ${TABLE}.order_moment_created ;;
+    sql: ${TABLE}.order_moment_created;;
   }
+
 
   dimension_group: order_moment_delivered {
     type: time
