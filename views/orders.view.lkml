@@ -3,6 +3,13 @@ view: orders {
     ;;
   drill_fields: [order_id]
 
+  measure: total_orders {
+    description: "Quantidade Total de Pedidos"
+    type: count_distinct
+    sql: ${order_id};;
+  }
+
+
   dimension: order_id {
     primary_key: yes
     type: number
