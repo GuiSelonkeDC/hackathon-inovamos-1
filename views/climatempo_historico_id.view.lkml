@@ -44,6 +44,15 @@ view: climatempo_historico_id {
     sql: ${TABLE}.precipitacao ;;
   }
 
+  dimension: chuva {
+    sql:
+    CASE WHEN ${TABLE}.precipitacao <> 0 THEN "Sim" ELSE "Nao"
+
+    ;;
+
+
+  }
+
   measure: count {
     type: count
     drill_fields: [id]
