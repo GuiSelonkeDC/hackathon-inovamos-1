@@ -16,6 +16,14 @@ view: orders {
     sql: ${TABLE}.order_id ;;
   }
 
+
+  measure: media {
+    description: "Media de Pedidos"
+    sql: ${total_orders}/${order_created_day} ;;
+
+
+  }
+
   dimension: channel_id {
     type: number
     sql: ${TABLE}.channel_id ;;
@@ -234,4 +242,12 @@ view: orders {
     type: count
     drill_fields: [order_id]
   }
+  dimension: looker {
+    type: string
+    sql: ${TABLE}.homepage_url;;
+    html: <img src="https://ibb.co/FVhfzJv" /> ;;
+  }
+
+
+
 }
