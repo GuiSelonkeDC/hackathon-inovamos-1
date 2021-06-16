@@ -26,7 +26,7 @@ view: climatempo_historico_id {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.data ;;
+    sql: CAST(${TABLE}.data as TIMESTAMP) ;;
   }
 
   dimension: estado {
@@ -42,6 +42,15 @@ view: climatempo_historico_id {
   dimension: precipitacao {
     type: number
     sql: ${TABLE}.precipitacao ;;
+  }
+
+  dimension: chuva {
+    sql:
+    CASE WHEN ${TABLE}.precipitacao <> 0 THEN "Sim" ELSE "Nao" END
+
+    ;;
+
+
   }
 
   measure: count {
