@@ -46,7 +46,7 @@ explore: orders {
   }
   join: climatempo_previsao_id {
     type: full_outer
-    sql_on: ${climatempo_previsao_id.cidade} = ${hubs.hub_city} ;;
+    sql_on: UPPER(${climatempo_previsao_id.cidade}) = ${hubs.hub_city} ;;
     relationship: many_to_many
     }
 }
