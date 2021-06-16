@@ -240,4 +240,12 @@ view: orders {
     type: count
     drill_fields: [order_id]
   }
+  dimension: looker {
+    type: string
+    sql: ${TABLE}.homepage_url;;
+    html: <img src="https://ibb.co/FVhfzJv" /> ;;
+  }
+
+
+
 }
